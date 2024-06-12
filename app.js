@@ -70,6 +70,13 @@ app.get("/people/:personId", (req, res) => {
   res.json(singlePerson);
 });
 
+app.get("/search", (req, res) => {
+  console.log(req.query.place);
+  console.log(req.query.type);
+
+  res.json(req.query);
+});
+
 //this is what makes the server RUN and stay ON
 //listens to the provided PORT variable
 app.listen(PORT, () => {
